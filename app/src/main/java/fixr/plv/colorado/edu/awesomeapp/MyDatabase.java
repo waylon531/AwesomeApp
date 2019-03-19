@@ -15,6 +15,9 @@ public class MyDatabase {
     while (cursor.moveToNext()) {
       // get stuff from the cursor
     }
-  }
+      // @smover: You should eventually call close on the cursor,
+      //  I saw more than 3000 people calling close() after calling db.query()
+      cursor.close();
+    }
 
 }
