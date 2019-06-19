@@ -43,15 +43,6 @@ public class MainActivity extends AppCompatActivity {
       });
   }
 
-  public int recycleItems(ViewGroup layout) {
-    for (int i = 0; i < layout.getChildCount(); i++) {
-      View v = layout.getChildAt(i);
-      layout.removeViewAt(i);
-    }
-
-    return 0;
-  }
-
   public int handleMessage(Handler handler) {
     Message msg = handler.obtainMessage(MainActivity.SEND_CODE,
                                         null);
