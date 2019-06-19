@@ -42,4 +42,30 @@ public class MainActivity extends AppCompatActivity {
         }
       });
   }
+
+  public void showDialog(Context context) {
+    AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(context);
+
+    String title = "Empty Field(s)";
+    String message = "Please ensure all fields are contain data";
+
+    dialogBuilder.setMessage(message);
+
+    dialogBuilder.setNegativeButton("OK",
+      new DialogInterface.OnClickListener() {
+        @Override
+        public void onClick(DialogInterface dialog, int which) {
+
+        }
+      });
+    dialogBuilder.setPositiveButton("Cancel",
+      new DialogInterface.OnClickListener() {
+        public void onClick(DialogInterface dialog, int which) {
+                // continue with delete
+        }
+      });
+
+    dialogBuilder.create();
+    dialogBuilder.show();
+  }
 }
