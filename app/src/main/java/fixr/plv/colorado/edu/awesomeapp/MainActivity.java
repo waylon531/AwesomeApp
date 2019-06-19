@@ -42,45 +42,4 @@ public class MainActivity extends AppCompatActivity {
         }
       });
   }
-
-  public int handleMessage(Handler handler) {
-    Message msg = handler.obtainMessage(MainActivity.SEND_CODE,
-                                        null);
-
-    Bundle bundle = new Bundle();
-    bundle.putString(MainActivity.MSG_KEY, "CODE");
-    msg.setData(bundle);
-
-//    handler.sendMsg(msg);
-
-    return 0;
-  }
-
-  public void showDialog(Context context) {
-    AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(context);
-
-    String title = "Empty Field(s)";
-    String message = "Please ensure all fields are contain data";
-
-//    dialogBuilder.setTitle(title);
-
-    dialogBuilder.setMessage(message);
-
-    dialogBuilder.setNegativeButton("OK",
-      new DialogInterface.OnClickListener() {
-        @Override
-        public void onClick(DialogInterface dialog, int which) {
-
-        }
-      });
-    dialogBuilder.setPositiveButton("Cancel",
-      new DialogInterface.OnClickListener() {
-        public void onClick(DialogInterface dialog, int which) {
-                // continue with delete
-        }
-      });
-
-    dialogBuilder.create();
-    dialogBuilder.show();
-  }
 }
