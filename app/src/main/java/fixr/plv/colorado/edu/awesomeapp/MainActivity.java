@@ -9,6 +9,8 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import android.os.Handler;
+import android.os.Message;
 
 import java.util.List;
 
@@ -16,6 +18,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 public class MainActivity extends AppCompatActivity {
+
+  static protected int SEND_CODE = 1;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +43,15 @@ public class MainActivity extends AppCompatActivity {
       View v = layout.getChildAt(i);
       layout.removeViewAt(i);
     }
+
+    return 0;
+  }
+
+  public int handleMessage(Handler handler) {
+    Message message =
+      handler.obtainMessage(MainActivity.SEND_CODE, 0, 0, null);
+
+    handler.sendMessage(message);
 
     return 0;
   }
