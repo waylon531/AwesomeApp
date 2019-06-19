@@ -33,13 +33,4 @@ public class MainActivity extends AppCompatActivity {
         }
       });
   }
-
-  public int recycleItems(ViewGroup layout) {
-    for (int i = 0; i < layout.getChildCount(); i++) {
-      View v = layout.getChildAt(i);
-      layout.removeViewAt(i);
-    }
-
-    return 0;
-  }
 }
