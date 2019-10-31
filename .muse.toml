@@ -1,3 +1,3 @@
-build = "gradlew assemble'
+build = "gradlew assemble"
 tools = []
 customTools = ["https://raw.githubusercontent.com/cuplv/biggroum/musedev_hackaton/musedev_script/biggroumcheck.sh"]
